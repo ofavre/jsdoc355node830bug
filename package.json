@@ -1,0 +1,15 @@
+{
+  "name": "jsdoc355node830bug",
+  "title": "JSDoc 3.5.5 with NodeJS 8.3.0+ strange bug",
+  "description": "A minimal reproduction of a strange bug",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "jsdoc": "3.5.5"
+  },
+  "scripts": {
+    "init": "npm install",
+    "doc": "npm run init && jsdoc -c jsdoc-conf.json",
+    "test": "rm -Rf out/; npm run doc; [ -f out/*_.html ] && echo 'BUG' || echo 'Good!'"
+  }
+}
